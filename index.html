@@ -16,7 +16,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
+                <div class="item" @mouseover="pauseScroll()" @mouseleave="autoScroll()">
                     <img :src="slides[activeItem].image" alt="Spiderman" />
                     <div class="text">
                         <h3>{{slides[activeItem].title}}</h3>
