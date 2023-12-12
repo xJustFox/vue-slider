@@ -34,22 +34,22 @@ createApp({
         }
     },
     methods: {
-        prevBtn(){
+        nextBtn(){
             if (this.activeItem == this.slides.length - 1) {
                 this.activeItem = 0
             } else {
                 this.activeItem++
             }
-            console.log(this.activeItem);
         },
-        nextBtn(){
+        prevBtn(){
             if (this.activeItem == 0) {
                 this.activeItem = this.slides.length - 1
             } else {
                 this.activeItem--
             }
-
-            console.log(this.activeItem);
+        },
+        changeImage(index){
+            this.activeItem = index
         }
     },
 }).mount('#app')
