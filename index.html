@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item" @mouseover="pauseScroll()" @mouseleave="autoScroll()">
-                    <img :src="slides[activeItem].image" alt="Spiderman" />
+                    <img :src="slides[activeItem].image" :alt="slides[activeItem].title" />
                     <div class="text">
                         <h3>{{slides[activeItem].title}}</h3>
                         <p>{{slides[activeItem].text}}</p>
@@ -29,7 +29,7 @@
                     <div class="next" @click="nextBtn"></div>
                     
                     <div class="thumb" :class="activeItem === index ? 'active' : ''" v-for="item, index in slides" :key="index" @click="changeImage(index)">
-                        <img :src="slides[index].image" alt="">
+                        <img :src="slides[index].image" :alt="slides[index].title">
                     </div>
                 </div>
 
